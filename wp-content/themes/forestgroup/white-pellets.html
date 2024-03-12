@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+
+    <!-- Подключение jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- Подключение библиотек Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <!-- Подключение Kwicks -->
+    <script src="assets/template/libs/kwicks/jquery.kwicks.min.js"></script>
+    <link rel="stylesheet" href="assets/template/libs/kwicks/kwicks.min.css">
+
+    <!-- Подключение Lightbox2 -->
+    <link rel="stylesheet" href="assets/template/libs/lightbox2/lightbox.css">
+    <!-- Подключение FlexSlider -->
+    <script src="assets/template/libs/FlexSlider/jquery.flexslider.js"></script>
+    <link rel="stylesheet" href="assets/template/libs/FlexSlider/flexslider.css">
+
+    <!-- Подключение Остальных -->
+    <link rel="stylesheet" href="/assets/template/css/style.css">
+    <link rel="stylesheet" href="/assets/template/css/media.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white ">
+            <div class="container">
+                <a href="/" class="logotype">
+                    <img src="assets/template/images/logotype.svg" alt="logo" height="60">
+                </a>
+                <ul class="nav mainMenu desktop" id="navbar">
+                    <li class="nav-item first active"><a class="nav-link" href="/">Главная</a></li>
+                    <li class="submenu nav-item"><a class="nav-link" href="about-forest-group.html">О компании</a>
+                        <div class="dropdown-submenu">
+                            <ul class="list-submenu ">
+                                <li><a href="about-forest-group.html" class="nav-sublink nav-item first">О «Форест
+                                        групп»</a>
+                                </li>
+                                <li><a href="quality-products.html" class="nav-sublink nav-item">Качество продукции</a>
+                                </li>
+                                <li><a href="ecology.html" class="nav-sublink nav-item">Экология</a></li>
+                                <li><a href="jobs.html" forest="" class="nav-sublink nav-item last">Вакансии</a></li>
+                            </ul>
+                            <div></div>
+                        </div>
+                    </li>
+                    <li class="submenu nav-item"><a class="nav-link" href="lumber.html">Продукция и услуги</a>
+                        <div class="dropdown-submenu">
+                            <ul class="list-submenu ">
+                                <li><a href="lumber.html" class="nav-sublink nav-item first">Пиломатериалы</a></li>
+                                <li><a href="mouldings.html" class="nav-sublink nav-item">Погонажные изделия</a></li>
+                                <li><a href="white-pellets.html" class="nav-sublink nav-item">Пеллеты</a></li>
+                                <li><a href="pallet.html" class="nav-sublink nav-item">Поддоны</a></li>
+                                <li><a href="glued-timber.html" class="nav-sublink nav-item">Клееный брус</a></li>
+                                <li><a href="building.html" class="nav-sublink nav-item last">Домостроение</a></li>
+                            </ul>
+                            <div></div>
+                        </div>
+                    </li>
+                    <li class="submenu nav-item"><a class="nav-link" href="questions-and-answers">Информация</a>
+                        <div class="dropdown-submenu">
+                            <ul class="list-submenu ">
+                                <li><a href="questions-and-answers" class="nav-sublink nav-item first active">Вопросы и
+                                        ответы</a></li>
+                                <li><a href="documents" class="nav-sublink nav-item">Документы</a></li>
+                                <li><a href="calculator" class="nav-sublink nav-item last">Калькулятор</a></li>
+                            </ul>
+                            <div></div>
+                        </div>
+                    </li>
+                    <li class="nav-item last"><a class="nav-link" href="contacts">Контакты</a></li>
+                </ul>
+                <div class="callback">
+                    <a href="tel:+79646182808" class="phone">+7 964 618-28-08</a>
+                    <button class="btn btn-outline-green" data-toggle="modal" data-target="#callbackModal">Заказать
+                        звонок</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondMenu">
+            <div class="container">
+                <ul class="nav secondMenu" id="navbar">
+                    <li class="nav-item first"><a class="nav-link" href="lumber/">Пиломатериалы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mouldings/">Погонажные изделия</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="white-pellets">Пеллеты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pallet">Поддоны</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glued-timber">Клееный брус</a></li>
+                    <li class="nav-item last"><a class="nav-link" href="building/">Домостроение</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="SecondBanner" style="background: url(/assets/template/images/banner/backgroundBanner1.jpg);">
+        <div class="container">
+            <div class="titleText">
+                <h1>Пеллеты</h1>
+
+            </div>
+        </div>
+    </section>
+    <section class="ProductsItem product">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="products__price">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="products__price-table">
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" width="70%">Характеристики</td>
+                                    <td width="30%">
+                                        <span style=" font-size: 14px; ">Цена c НДС за тонну</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>Фасовка</th>
+                                    <th>Зольность</th>
+                                    <th>Диаметр</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td>Пеллеты (светло-серые)<br>15 кг (66 шт/пал)</td>
+                                    <td>0,7%</td>
+                                    <td>6 мм</td>
+                                    <td rowspan="3">Цену уточните у менеджера</td>
+                                </tr>
+                                <tr>
+                                    <td>Биг бэг (светло-серые)<br>1000 кг</td>
+                                    <td>0,7%</td>
+                                    <td>6 мм</td>
+                                </tr>
+                                <tr>
+                                    <td>Биг бэг (светлые премиум)<br>1000 кг</td>
+                                    <td>0,3%</td>
+                                    <td>6 мм</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!--span class="products__footnote">* По индивидуальному заказу возможно изготовление продукции не стандартного размера</span-->
+                    <div class="products__btn-order">
+                        <!--button class="btn btn-green" data-toggle="modal" data-target="#callbackModal">Заказать</button-->
+                        <button class="btn btn-green" data-toggle="modal" data-target="#callbackModal">Связаться с
+                            менеджером</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="slider" class="flexslider">
+                        <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                            <ul class="slides list"
+                                style="width: 1400%; transition-duration: 0s; transform: translate3d(-450px, 0px, 0px);">
+                                <li class="slides__item flex-active-slide"
+                                    style="width: 450px; margin-right: 0px; float: left; display: block;"
+                                    data-thumb-alt="">
+                                    <a href="/assets/gallery/17/93.jpg" data-lightbox="17" title="Пеллеты" class="slides__item-link">
+                                        <img src="/assets/gallery/17/93.jpg" width="600" alt="" class="slides__item-img"
+                                            draggable="false">
+                                        <span class="zoom">
+                                            <svg width="16" height="16" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M588,203h-3v-2h3v-3h2v3A2,2,0,0,1,588,203Zm0-14h-3v-2h3a2,2,0,0,1,2,2v3h-2v-3Zm-2,3v6a1,1,0,0,1-1,1h-6a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h6A1,1,0,0,1,586,192Zm-2,1h-4v4h4v-4Zm-8-1h-2v-3a2,2,0,0,1,2-2h3v2h-3v3Zm0,9h3v2h-3a2,2,0,0,1-2-2v-3h2v3Z"
+                                                    transform="translate(-574 -187)"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="slides__item" data-thumb-alt=""
+                                    style="width: 450px; margin-right: 0px; float: left; display: block;">
+                                    <a href="/assets/gallery/17/89.jpg" data-lightbox="17" title="Пеллеты"
+                                        class="slides__item-link">
+                                        <img src="/assets/gallery/17/89.jpg" width="600" alt="" class="slides__item-img"
+                                            draggable="false">
+                                        <span class="zoom">
+                                            <svg width="16" height="16" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M588,203h-3v-2h3v-3h2v3A2,2,0,0,1,588,203Zm0-14h-3v-2h3a2,2,0,0,1,2,2v3h-2v-3Zm-2,3v6a1,1,0,0,1-1,1h-6a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h6A1,1,0,0,1,586,192Zm-2,1h-4v4h4v-4Zm-8-1h-2v-3a2,2,0,0,1,2-2h3v2h-3v3Zm0,9h3v2h-3a2,2,0,0,1-2-2v-3h2v3Z"
+                                                    transform="translate(-574 -187)"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="slides__item" data-thumb-alt=""
+                                    style="width: 450px; margin-right: 0px; float: left; display: block;">
+                                    <a href="/assets/gallery/17/90.jpg" data-lightbox="17" title="Пеллеты"
+                                        class="slides__item-link">
+                                        <img src="/assets/gallery/17/90.jpg" width="600" alt="" class="slides__item-img"
+                                            draggable="false">
+                                        <span class="zoom">
+                                            <svg width="16" height="16" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M588,203h-3v-2h3v-3h2v3A2,2,0,0,1,588,203Zm0-14h-3v-2h3a2,2,0,0,1,2,2v3h-2v-3Zm-2,3v6a1,1,0,0,1-1,1h-6a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h6A1,1,0,0,1,586,192Zm-2,1h-4v4h4v-4Zm-8-1h-2v-3a2,2,0,0,1,2-2h3v2h-3v3Zm0,9h3v2h-3a2,2,0,0,1-2-2v-3h2v3Z"
+                                                    transform="translate(-574 -187)"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="slides__item" data-thumb-alt=""
+                                    style="width: 450px; margin-right: 0px; float: left; display: block;">
+                                    <a href="/assets/gallery/17/92.jpg" data-lightbox="17" title="Пеллеты"
+                                        class="slides__item-link">
+                                        <img src="/assets/gallery/17/92.jpg" width="600" alt="" class="slides__item-img"
+                                            draggable="false">
+                                        <span class="zoom">
+                                            <svg width="16" height="16" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M588,203h-3v-2h3v-3h2v3A2,2,0,0,1,588,203Zm0-14h-3v-2h3a2,2,0,0,1,2,2v3h-2v-3Zm-2,3v6a1,1,0,0,1-1,1h-6a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h6A1,1,0,0,1,586,192Zm-2,1h-4v4h4v-4Zm-8-1h-2v-3a2,2,0,0,1,2-2h3v2h-3v3Zm0,9h3v2h-3a2,2,0,0,1-2-2v-3h2v3Z"
+                                                    transform="translate(-574 -187)"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="slides__item" data-thumb-alt=""
+                                    style="width: 450px; margin-right: 0px; float: left; display: block;">
+                                    <a href="/assets/gallery/17/91.jpg" data-lightbox="17" title="Пеллеты"
+                                        class="slides__item-link">
+                                        <img src="/assets/gallery/17/91.jpg" width="600" alt="" class="slides__item-img"
+                                            draggable="false">
+                                        <span class="zoom">
+                                            <svg width="16" height="16" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M588,203h-3v-2h3v-3h2v3A2,2,0,0,1,588,203Zm0-14h-3v-2h3a2,2,0,0,1,2,2v3h-2v-3Zm-2,3v6a1,1,0,0,1-1,1h-6a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h6A1,1,0,0,1,586,192Zm-2,1h-4v4h4v-4Zm-8-1h-2v-3a2,2,0,0,1,2-2h3v2h-3v3Zm0,9h3v2h-3a2,2,0,0,1-2-2v-3h2v3Z"
+                                                    transform="translate(-574 -187)"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ol class="flex-control-nav flex-control-thumbs">
+                            <li><img class="flex-active" draggable="false"></li>
+                            <li><img draggable="false"></li>
+                            <li><img draggable="false"></li>
+                            <li><img draggable="false"></li>
+                            <li><img draggable="false"></li>
+                        </ol>
+                        <ul class="flex-direction-nav">
+                            <li class="flex-nav-prev"><a class="flex-prev" href="#">Previous</a></li>
+                            <li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li>
+                        </ul>
+                    </div>
+                    <div id="carousel" class="flexslider carousel">
+
+                        <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                            <ul class="slides list"
+                                style="width: 1000%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+                                <li class="flex-active-slide"
+                                    style="width: 123px; margin-right: 5px; float: left; display: block;">
+                                    <img src="/assets/gallery/17/93.jpg" alt="" draggable="false">
+                                </li>
+                                <li style="width: 123px; margin-right: 5px; float: left; display: block;">
+                                    <img src="/assets/gallery/17/89.jpg" alt="" draggable="false">
+                                </li>
+                                <li style="width: 123px; margin-right: 5px; float: left; display: block;">
+                                    <img src="/assets/gallery/17/90.jpg" alt="" draggable="false">
+                                </li>
+                                <li style="width: 123px; margin-right: 5px; float: left; display: block;">
+                                    <img src="/assets/gallery/17/92.jpg" alt="" draggable="false">
+                                </li>
+                                <li style="width: 123px; margin-right: 5px; float: left; display: block;">
+                                    <img src="/assets/gallery/17/91.jpg" alt="" draggable="false">
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="flex-direction-nav">
+                            <li class="flex-nav-prev"><a class="flex-prev flex-disabled" href="#"
+                                    tabindex="-1">Previous</a></li>
+                            <li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ProductsItemInfo product">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="products__infotext">
+                        <ul class="nav products__tab-nav" id="productsTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description"
+                                    role="tab" aria-controls="description" aria-selected="true">Описание</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="specification-tab" data-toggle="tab" href="#specification"
+                                    role="tab" aria-controls="specification" aria-selected="false">Характеристики</a>
+                            </li>
+                        </ul>
+                        <div class="products__tab-content" id="productsTabContent">
+                            <div class="tab-pane fade show active" id="description" role="tabpanel"
+                                aria-labelledby="description-tab">
+                                <p>Топливные пеллеты - ценный продукт, который производит предприятие замкнутого
+                                    (безотходного) цикла Forest group. Гранулированное биотопливо получается из отходов
+                                    лесопиления - опилок и мелкой щепы. Современные линии формуют сырье в гранулы
+                                    диаметром 6-8 мм, длиной до 50 мм. Продукция нашего предприятия используется в
+                                    домашних котлах, в промышленных котлах и теплоэлектростанциях на производствах, как
+                                    наполнитель для кошачьего туалета и подстилка для животных. </p>
+                                <p>Вся наша продукция проходит полный технологический цикл и соответствует <b>высоким
+                                        стандартам качества FSC</b>.</p>
+                                <h3>Пеллеты оптом</h3>
+                                <p>Forest group предлагает пеллеты от производителя с возможностью поставки оптовых
+                                    партий продукции. Предприятие обеспечивает фасовку в big bag по 1 тонне и мешки по
+                                    15 кг. Купить пеллеты для отопления можно с учетом действующих скидок и акций для
+                                    постоянных покупателей. </p>
+                                <h3>Преимущества пеллет</h3>
+                                <ul>
+                                    <li>удельная теплоёмкость пеллет выше чем у дерева до двух раз;</li>
+                                    <li>пеллеты выходят дешевле чем дрова и уголь;</li>
+                                    <li>пеллеты не отсыревают в герметичной упаковке и всегда готовы к использованию;
+                                    </li>
+                                    <li>котлы для отопления могут использовать автоматизированную подачу пеллет;</li>
+                                    <li>пеллеты занимают в 3 раза меньше места при хранении чем дрова.</li>
+                                </ul>
+                                <p></p>
+                                <h3>Купить пеллеты с доставкой</h3>
+                                <p>При покупке оптовых партий пеллетов компания Forest group осуществляет доставку
+                                    готовой продукции до клиента. На данный момент мы осуществляем поставки по России и
+                                    страны зарубежья среди которых Китай, Индия, Египет, Турция.</p>
+                            </div>
+                            <div class="tab-pane fade" id="specification" role="tabpanel"
+                                aria-labelledby="specification-tab">
+                                <p>В наличии пеллеты двух типов, производимые по разным техническим процессам.</p>
+                                <table class="w-100 mb-3">
+                                    <thead>
+                                        <tr>
+                                            <th>Светлые пеллеты</th>
+                                            <th>Светло-серые пеллеты</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="small">
+                                                <ul>
+                                                    <li>100% Хвойная древесина</li>
+                                                    <li>Диаметр: 6 - 8 мм</li>
+                                                    <li>Теплотворность до 19.3 МДж/кг</li>
+                                                    <li>Влажность: до 5%</li>
+                                                    <li>Зольность, до 0.3%</li>
+                                                    <li>Упаковка: Мешки, биг-беги</li>
+                                                    <li>Плотность пеллет 1400-1500 кг/м3</li>
+                                                    <li>Насыпная плотность, 730 кг/м3</li>
+                                                </ul>
+                                            </td>
+                                            <td class="small">
+                                                <ul>
+                                                    <li>Хвойная древесина + Кора</li>
+                                                    <li>Диаметр: 6 - 8 мм</li>
+                                                    <li>Теплотворность до 17 МДж/кг</li>
+                                                    <li>Влажность: до 8%</li>
+                                                    <li>Зольность, до 0.8%</li>
+                                                    <li>Упаковка: Мешки, биг-беги</li>
+                                                    <li>Плотность пеллет 1300-1400 кг/м3</li>
+                                                    <li>Насыпная плотность, 700 кг/м3</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>Светлые пеллеты отличает большая плотность, меньшая влажность и более высокая
+                                    теплоёмкость. Это премиальные пеллеты, которые дают максимальную эффективность и
+                                    меньший выход золы. Отлично подходят для отопления собственного дома.</p>
+                                <p>Светлыо-серые пеллеты более легкие, дешевые и отлично подходят для производственных
+                                    предприятий, которым требуются большие объемы предприятий.</p>
+
+                                <h3>Сертификаты</h3>
+                                <div class="smi-material__content mb-3">
+                                    <a class="smi-material__title"
+                                        href="https://forest-groups.ru/assets/doc/light-pellets.pdf"
+                                        target="_blank">СЕРТИФИКАТ ИСПЫТАНИЙ</a>
+                                    <div class="description">Светлые пеллеты</div>
+                                    <span class="smi-material__doc">PDF</span>
+                                    <span class="smi-material__value">0.25 МБ</span>
+                                </div>
+                                <div class="smi-material__content mb-3">
+                                    <a class="smi-material__title"
+                                        href="https://forest-groups.ru/assets/doc/light-grey-pellets.pdf"
+                                        target="_blank">СЕРТИФИКАТ ИСПЫТАНИЙ</a>
+                                    <div class="description">Светло-серые пеллеты</div>
+                                    <span class="smi-material__doc">PDF</span>
+                                    <span class="smi-material__value">0.28 МБ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fixed_block_fix"></div>
+                    <div class="ask_a_question">
+                        <div class="question-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.6 53">
+                                <g id="fdd24c5f-cca7-4e08-8a02-6c66fdb5a592" class="fon">
+                                    <path
+                                        d="M52.4,27.5,29.9,39,7.4,27.5V47.1a3.9,3.9,0,0,0,4,3.9h37a3.9,3.9,0,0,0,4-3.9Z"
+                                        transform="translate(-1.1 -3.7)"></path>
+                                </g>
+                                <g id="b27b2577-408b-4d74-95ad-10efead1c0b7" class="body">
+                                    <path
+                                        d="M56.4,24.5,44,16.9a1,1,0,0,0-1.4.3h0a1,1,0,0,0,.3,1.4L53,24.8a.5.5,0,0,1,0,.9l-22.4,12a1.4,1.4,0,0,1-1.5,0L6.8,25.7a.5.5,0,0,1,0-.9l10-6.2a1,1,0,0,0,.4-1.4,1,1,0,0,0-1.4-.3L3.4,24.5a6.3,6.3,0,0,0-2.3,4.8V50.1a6.7,6.7,0,0,0,6.6,6.6H52.1a6.6,6.6,0,0,0,6.6-6.6V29.3A6,6,0,0,0,56.4,24.5Zm-1.2,2.3a.6.6,0,0,1,.8.2,3.7,3.7,0,0,1,.7,2.3V49.7c0,.5,0,1.7-.5,2.1s-1.8-.4-1.8-.4l-17-14.1a.6.6,0,0,1,.2-1Zm-33,10.5L5.4,51.3s-.9,1-1.8.5-.5-1.3-.5-1.7V29.3A4.5,4.5,0,0,1,3.8,27a.7.7,0,0,1,.9-.2l17.4,9.5A.6.6,0,0,1,22.2,37.3ZM7.1,54.7A.9.9,0,0,1,6.5,53l18-15a.6.6,0,0,1,.7-.1L29.1,40a1.4,1.4,0,0,0,1.5,0l3.9-2.1a.6.6,0,0,1,.7.1L53.3,53.1a.9.9,0,0,1-.6,1.6Z"
+                                        transform="translate(-1.1 -3.7)"></path>
+                                    <path
+                                        d="M22.5,12a.9.9,0,0,0,.9-.8,6.5,6.5,0,0,1,12.9,1.3c-.1,2-1.4,3-2.9,4.1s-4.1,3.2-4.4,7.2a.9.9,0,0,0,.9,1,.9.9,0,0,0,.9-.8c.2-3.2,1.9-4.5,3.7-5.9s3.8-2.9,3.7-6.3a8.4,8.4,0,0,0-6.4-7.9A8.3,8.3,0,0,0,21.6,11,.8.8,0,0,0,22.5,12Z"
+                                        transform="translate(-1.1 -3.7)"></path>
+                                    <circle cx="28.8" cy="25.3" r="1.5"></circle>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="question-text">
+                            <h5 class="introtext">Нужна консультация?</h5>
+                            <span>Наши специалисты ответят на любой интересующий вопрос</span>
+                        </div>
+                        <div class="question-btn">
+                            <button class="btn btn-outline-green" data-toggle="modal"
+                                data-target="#callbackModal">Задать вопрос</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="gray-block lightGray">
+            <div class="container">
+                <div class="row">
+                    <div class="block left col-sm-12 col-md-3">
+                        <a href="/" class="logotype"><img src="../assets/template/images/logotype.svg"
+                                alt="forest-groups" height="60"></a>
+                        <div class="phone">
+                            <!--a href="tel:+79611383157">+7 961 138-31-57</a-->
+                            <a href="tel:+79646182808">+7 964 618-28-08</a>
+                        </div>
+                        <span class="address">215113, Смоленская обл., Вяземский р-н, г.Вязьма, ул.Новая Бозня,
+                            д.3</span>
+                    </div>
+                    <div class="block center col-sm-12 col-md-6">
+                        <div class="nav row">
+                            <div class="block nav-block col-sm-12 col-md-4">
+                                <h5>О компании</h5>
+                                <ul class="footerMenu">
+                                    <li class="nav-item first"><a class="nav-link" href="about-forest-group">О «Форест
+                                            групп»</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="quality-products">Качество
+                                            продукции</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="ecology">Экология</a></li>
+                                    <li class="nav-item last"><a class="nav-link" href="jobs/" forest="">Вакансии</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="block nav-block col-sm-12 col-md-4">
+                                <h5>Продукция и услуги</h5>
+                                <ul class="footerMenu">
+                                    <li class="nav-item first"><a class="nav-link" href="lumber/">Пиломатериалы</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="mouldings/">Погонажные изделия</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="white-pellets">Пеллеты</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="pallet">Поддоны</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="glued-timber">Клееный брус</a></li>
+                                    <li class="nav-item last"><a class="nav-link" href="building/">Домостроение</a></li>
+                                </ul>
+                            </div>
+                            <div class="block nav-block col-sm-12 col-md-4">
+                                <h5>Информация</h5>
+                                <ul class="footerMenu">
+                                    <li class="nav-item first"><a class="nav-link" href="questions-and-answers">Вопросы
+                                            и ответы</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="documents">Документы</a></li>
+                                    <li class="nav-item last"><a class="nav-link" href="calculator">Калькулятор</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block right col-sm-12 col-md-3">
+                        <h5>Напишите нам:</h5>
+                        <a target="_blank"
+                            href="mailto:mail@forest-groups.ru?subject=Вопрос с сайта ФОРЕСТ ГРУПП">mail@forest-groups.ru</a>
+
+                        <div class="social decktop">
+                            <a target="_blank" href="https://t.me/ForestGroups_bot">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.3 28.3" xml:space="preserve">
+                                    <path class="st0" d="M11.1,17.6L11.1,17.6L11.1,17.6L11.1,17.6L11.1,17.6L23.2,6.7c0.5-0.5-0.1-0.7-0.8-0.3L7.5,15.8l-6.4-2
+                                    c-1.4-0.4-1.4-1.4,0.3-2.1L26.4,2c1.1-0.5,2.3,0.3,1.8,2L24,24.2c-0.3,1.4-1.2,1.8-2.4,1.1l-6.5-4.8l-3.1,3c0,0,0,0,0,0
+                                    c-0.4,0.3-0.6,0.6-1.3,0.6L11.1,17.6z" fill="#169CDE"></path>
+                                </svg>
+                            </a>
+                            <a target="_blank" href="http://wa.me/79646182808">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.3 28.3" fill="none">
+                                    <path class="st0"
+                                        d="M24.2,4.2C21.6,1.5,18,0,14.2,0C6.5,0,0.1,6.3,0.1,14c0,2.5,0.6,4.9,1.9,7l-2,7.3l7.5-2c2,1.2,4.4,1.8,6.7,1.8
+                                        c7.8,0,14.1-6.3,14.1-14C28.3,10.3,26.8,6.8,24.2,4.2z M21.1,18.9c-0.3,0.9-1.7,1.6-2.4,1.7c-0.6,0.1-1.4,0.2-2.2-0.1
+                                        c-0.5-0.1-1.2-0.3-2-0.7c-3.5-1.5-5.8-5.1-6-5.3c-0.1-0.2-1.4-1.9-1.4-3.6C7.1,9.2,8,8.3,8.3,8C8.6,7.6,9,7.6,9.2,7.8
+                                        c0.3,0,0.5,0,0.7,0c0.2,0,0.5-0.1,0.8,0.6c0.3,0.7,1,2.4,1.1,2.6c0.1,0.2,0.1,0.4,0,0.6c-0.2,0.2-0.2,0.4-0.4,0.6
+                                        c-0.1,0.2-0.3,0.4-0.5,0.6c-0.2,0.2-0.4,0.3-0.2,0.7c0.2,0.3,1,1.5,2,2.4c1.3,1.2,2.4,1.5,2.8,1.7c0.4,0.2,0.6,0.1,0.8-0.1
+                                        c0.2-0.3,0.9-1,1.1-1.4c0.2-0.4,0.5-0.3,0.8-0.2c0.3,0.1,2,0.9,2.4,1.1c0.4,0.2,0.6,0.3,0.7,0.4C21.4,17.5,21.4,18.2,21.1,18.9z"
+                                        fill="#58e870"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="social mobil">
+                            <a target="_blank" href="https://t.me/ForestGroups_bot">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.3 28.3" xml:space="preserve">
+                                    <path class="st0" d="M11.1,17.6L11.1,17.6L11.1,17.6L11.1,17.6L11.1,17.6L23.2,6.7c0.5-0.5-0.1-0.7-0.8-0.3L7.5,15.8l-6.4-2
+                                    c-1.4-0.4-1.4-1.4,0.3-2.1L26.4,2c1.1-0.5,2.3,0.3,1.8,2L24,24.2c-0.3,1.4-1.2,1.8-2.4,1.1l-6.5-4.8l-3.1,3c0,0,0,0,0,0
+                                    c-0.4,0.3-0.6,0.6-1.3,0.6L11.1,17.6z" fill="#169CDE"></path>
+                                </svg>
+                            </a>
+                            <a target="_blank" href="http://wa.me/79646182808">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.3 28.3" fill="none">
+                                    <path class="st0"
+                                        d="M24.2,4.2C21.6,1.5,18,0,14.2,0C6.5,0,0.1,6.3,0.1,14c0,2.5,0.6,4.9,1.9,7l-2,7.3l7.5-2c2,1.2,4.4,1.8,6.7,1.8
+                                        c7.8,0,14.1-6.3,14.1-14C28.3,10.3,26.8,6.8,24.2,4.2z M21.1,18.9c-0.3,0.9-1.7,1.6-2.4,1.7c-0.6,0.1-1.4,0.2-2.2-0.1
+                                        c-0.5-0.1-1.2-0.3-2-0.7c-3.5-1.5-5.8-5.1-6-5.3c-0.1-0.2-1.4-1.9-1.4-3.6C7.1,9.2,8,8.3,8.3,8C8.6,7.6,9,7.6,9.2,7.8
+                                        c0.3,0,0.5,0,0.7,0c0.2,0,0.5-0.1,0.8,0.6c0.3,0.7,1,2.4,1.1,2.6c0.1,0.2,0.1,0.4,0,0.6c-0.2,0.2-0.2,0.4-0.4,0.6
+                                        c-0.1,0.2-0.3,0.4-0.5,0.6c-0.2,0.2-0.4,0.3-0.2,0.7c0.2,0.3,1,1.5,2,2.4c1.3,1.2,2.4,1.5,2.8,1.7c0.4,0.2,0.6,0.1,0.8-0.1
+                                        c0.2-0.3,0.9-1,1.1-1.4c0.2-0.4,0.5-0.3,0.8-0.2c0.3,0.1,2,0.9,2.4,1.1c0.4,0.2,0.6,0.3,0.7,0.4C21.4,17.5,21.4,18.2,21.1,18.9z"
+                                        fill="#58e870"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <span>Пишите в любое время дня и ночи</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="black-block">
+            <div class="container">
+                <div class="row">
+                    <div class="block left col-sm-12 col-md-4">
+                        <a href="assets/doc/privacy-policy.pdf" target="_blank">Политика конфиденциальности</a>
+                    </div>
+                    <div class="block center col-sm-12 col-md-4">
+                        2018 - 2024 © ООО "ФОРЕСТ ГРУПП". Все права защищены.
+                    </div>
+                    <div class="block right col-sm-12 col-md-4">
+                        ИНН 6722033415/КПП 672201001/ОГРН 1186733017130
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="lightboxOverlay" class="lightboxOverlay" style="display: none; width: 1044px; height: 2350px;"></div>
+    <div id="lightbox" class="lightbox" style="top: 250px; left: 0px; display: none;">
+        <div class="lb-outerContainer" style="width: 1020px; height: 670px;">
+            <div class="lb-container"><img class="lb-image" src="/assets/gallery/17/93.jpg" alt=""
+                    style="width: 1020px; height: 670px;">
+                <div class="lb-nav" style=""><a class="lb-prev" aria-label="Previous image" href="" style=""></a><a
+                        class="lb-next" aria-label="Next image" href="" style=""></a></div>
+                <div class="lb-loader" style="display: none;"><a class="lb-cancel"></a></div>
+            </div>
+        </div>
+        <div class="lb-dataContainer" style="width: 1020px;">
+            <div class="lb-data">
+                <div class="lb-details"><span class="lb-caption" style="">Пеллеты</span><span class="lb-number">Image 2
+                        of 7</span></div>
+                <div class="lb-closeContainer"><a class="lb-close"></a></div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="remodal-wrapper modal fade" id="callbackModal" tabindex="-1" role="dialog"
+        aria-labelledby="callbackModalLabel" style="display: none;" aria-hidden="true">
+        <div class="remodal modal-dialog" role="document">
+            <div class="remodal-content">
+                <div class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></div>
+                <div class="remodal-title">
+                    <h3>Заказать звонок</h3>
+                    <span>Оставьте заявку и наш менеджер свяжется с Вами в ближайшее время</span>
+                </div>
+                <form action="contacts" method="post" class="ajax_form af_example" id="RequestCall">
+                    <input type="hidden" name="pageURL" value="https://forest-groups.ru/contacts">
+                    <input type="hidden" name="title" value="Контакты">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="JljkhYUj" value="" placeholder="Имя*">
+                        <span class="error_JljkhYUj"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="ljbghjwk" value=""
+                            placeholder="Номер телефона*">
+                        <span class="error_ljbghjwk"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" value="" placeholder="E-mail">
+                        <span class="error_email"></span>
+                    </div>
+                    <div class="form-group s-message">
+                        <input class="form-control" type="text" name="nospam:blank" value=""
+                            placeholder="Ваше сообщение">
+                        <textarea class="form-control" name="message" value="" placeholder="Ваше сообщение"></textarea>
+                        <span class="error_message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="custom">
+                            <input class="checkbox" type="checkbox"
+                                onchange="document.getElementById('RequestCallBtn').disabled = !this.checked">
+                            <span class="checkbox-custom"></span>
+                            <span class="label"> <a href="https://forest-groups.ru/assets/doc/privacy-policy.pdf"
+                                    target="_blank">Я соглашаюсь с политикой обработки персональных данных</a></span>
+                        </label>
+                    </div>
+                    <div class="form-button">
+                        <input type="submit" name="RequestCall" class="btn btn-big btn-green" id="RequestCallBtn"
+                            value="Отправить" disabled="">
+                    </div>
+
+                    <input type="hidden" name="af_action" value="4faebcfab493a9709b77db01b9bc15ad">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End modal -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="/assets/template/libs/counter/jquery.counterup.min.js"></script>
+    <script src="/assets/template/libs/counter/jquery.waypoints.js"></script>
+    <script src="assets/template/libs/FlexSlider/jquery.flexslider.js"></script>
+    <!-- Подключение lightbox -->
+    <script src="assets/template/libs/lightbox2/lightbox.js"></script>
+    <!-- <script src="assets/template/libs/lightbox2/lightbox-plus-jquery.min.js"></script> -->
+    <!-- Подключение файла -->
+    <script src="assets/template/js/common.js"></script>
+
+</body>
+
+</html>

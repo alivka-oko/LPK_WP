@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* ==============================================================
+   Author: Anatoly Dobrokhotov, Telegrame: @kysocheg;
+ * ============================================================ */
+   /* ==========================================================================
+ Media Queries Style ( менее 1200)
+ *========================================================================== */
+@media screen and (max-width:1200px) {
+    
+header .navbar .right-block .languages .languages-active {margin-right: 15px; width: 50px;}
+header .navbar .right-block .languages i.flag:not(.icon) {margin: 0;}
+header .navbar .mainMenu .nav-item.first,
+header .navbar .right-block .languages .languages-name {display: none;}
+
+}
+  /* ==========================================================================
+ Media Queries Style ( менее 991)
+ *========================================================================== */
+@media screen and (max-width:991px) {
+header .navbar.bg-secondMenu,
+header .navbar .mainMenu.desktop,
+header .navbar .right-block,
+section.MainBanner .bannerDesktop,
+section.News .articles-item .articles-img .articles-title,
+footer .gray-block .social.decktop {display: none !important;}
+header .menuMobil,
+section.MainBanner .bannerMobil,
+section.News .articles-item .articles-title.mobil,
+footer .gray-block .social.mobil {display: block;}
+header .navbar .right-block .languages .languages-name  {display: inline;}
+header .navbar .right-block .languages .languages-active {border-left: none;}
+header .navbar .right-block .languages .languages-active {width: 115px;}
+header .navbar .right-block .languages i.flag:not(.icon) {margin: 0 10px 0 0;}
+section.MainBanner, 
+section.MainBanner .kwicks .kwicks-item .kwicks-item-fon, 
+section.MainBanner .kwicks .kwicks-item .kwicks-item-text {height: inherit;}
+.AboutCompany .about .about-text  {margin-bottom: 30px;}
+.AboutCompany .about .plantAir .plantAir-link .plantAir-btn {width: 75px;}
+.AboutCompany .about .plantAir .plantAir-link .plantAir-text {opacity: 100;}
+.VideoPresentationModal {height: 280px;}
+}
+
+ /* ==========================================================================
+ Media Queries Style ( менее 767)
+ *========================================================================== */
+@media screen and (max-width: 767px) {
+    .HouseDescription .block .description { columns: 1; }
+    section.MainBanner:before {display: none;}
+    section.MainBanner .bannerMobil .bannerMobil-item {margin-bottom: 15px;}
+    section.MainBanner .bannerMobil .bannerMobil-item:last-child {margin: 0;}
+    section.MainBanner .bannerMobil .bannerMobil-item .bannerMobil-item-link .bannerMobil-item-fon {height: 90px;}   
+    label.custom .label a {font-size: 13px;}
+    footer .black-block .left {
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    footer .gray-block,
+    footer .black-block .right {
+        text-align: center;
+    }
+    footer .gray-block .block {margin-bottom: 30px;}
+    footer .gray-block .block:last-child {margin: 0;}
+    footer .gray-block .block h5, footer .gray-block .left .phone {font-size: 20px;}
+    footer .gray-block .left .address {padding: 0 20%;}
+    footer .gray-block .right .social a {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+        padding: 15px;
+    }
+}
+ /* ==========================================================================
+ Media Queries Style ( менее 575)
+ *========================================================================== */
+@media screen and (max-width: 575px) {
+h2, .big-title { font-size: 36px;}
+section.MainBanner .bannerMobil {padding: 0 15px;}
+section.MainBanner .bannerMobil .bannerMobil-item .bannerMobil-item-link .bannerMobil-item-fon {height: 115px;} 
+.remodal-wrapper .remodal {padding: 15px 30px;}
+.remodal-title span {width: 250px; margin: auto;}
+label.custom .label {width: calc(100% - 35px);}
+label.custom .label a {font-size: 14px;}
+.smi-material__container {padding: 0 2rem;}
+}
