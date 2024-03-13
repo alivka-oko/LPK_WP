@@ -28,9 +28,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container">
-                <a href="<?= home_url(); ?>" class="logotype">
-                    <?php the_custom_logo() ?>
-                </a>
+                <?php the_custom_logo() ?>
                 <ul class="nav mainMenu desktop" id="navbar">
                     <?php
                     wp_nav_menu([
