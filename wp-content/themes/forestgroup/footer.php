@@ -100,13 +100,13 @@
         <div class="container">
             <div class="row">
                 <div class="block left col-sm-12 col-md-4">
-                    <a href="assets/doc/privacy-policy.pdf" target="_blank">Политика конфиденциальности</a>
+                    <a href="<?= CFS()->get( 's_footer_doc-file', 71 );?>" target="_blank"><?= CFS()->get( 's_footer_doc-name', 71 );?></a>
                 </div>
                 <div class="block center col-sm-12 col-md-4">
-                    2018 - 2024 © ООО "ФОРЕСТ ГРУПП". Все права защищены.
+                    2018 - 2024 © <?= CFS()->get( 's_footer_company', 71 );?>. Все права защищены.
                 </div>
                 <div class="block right col-sm-12 col-md-4">
-                    ИНН 6722033415/КПП 672201001/ОГРН 1186733017130
+                <?= CFS()->get( 's_footer_info', 71 );?>
                 </div>
             </div>
         </div>
@@ -160,7 +160,7 @@
 </div>
 <!-- End modal -->
 <!-- Modal -->
-<!-- <div class="modal fade bd-example-modal-lg" id="VideoPresentationModal" tabindex="-1"
+<div class="modal fade bd-example-modal-lg" id="VideoPresentationModal" tabindex="-1"
         aria-labelledby="VideoPresentationModalLabel" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -171,9 +171,8 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 <!-- End modal -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

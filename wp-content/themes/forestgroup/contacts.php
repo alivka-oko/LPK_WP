@@ -16,21 +16,8 @@ Template Name: Контакты
     <div class="row">
         <div class="col-md-6 contactText">
             <div class="left-block">
-                <div class="contact-title">215113, Смоленская обл.,<br>г.Вязьма, ул.Новая Бозня, д.3</div>
+                <div class="contact-title"><?= CFS()->get( 's_address', 71 );?></div>
                 <div class="row">
-
-                    <!--div class="col-md-6 contact-item">
-                            <h4><i>Снабжение</i></h4>
-                            <div class="phone">+7 499 709-09-09 доб. 111</div>
-                            <div class="email"><a target="_blank" href="mailto:snab@forest-groups.ru">snab@forest-groups.ru</a></div>
-                        </div-->
-                    <!--div class="col-md-6 contact-item">
-                            <h4><i>Отдел продаж</i></h4>
-                            <div>Алексей Попов</div>
-                            <div class="phone">+7 961 138-31-57 (WhatsApp)</div>
-                            <div class="email"><a target="_blank" href="mailto:sales@forest-groups.ru">sales@forest-groups.ru</a></div>
-                        </div-->
-
                     <?php
                     $departaments = CFS()->get('departments');
                     foreach ($departaments as $departament) {

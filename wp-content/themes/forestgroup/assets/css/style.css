@@ -496,7 +496,7 @@ a.btn:focus {
     transition: all .55s ease;
     width: 15px;
     height: 15px;
-    background-image: url(/assets/template/images/icon/icon-close.svg);
+    background-image: url(../images/icon/icon-close.svg);
 }
 
 .remodal-wrapper .remodal .remodal-content .close:hover {

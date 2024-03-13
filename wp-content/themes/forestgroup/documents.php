@@ -8,9 +8,9 @@ Template Name: Документы
     <?php
     $document_icons = CFS()->get('document_icons');
     foreach ($document_icons as $document) {
-    ?>.smi-material__content.<?= $document['document_extension']; ?>:before {
-        background-image: url(<?= $document['document_ico']; ?>);
-    }
+    ?>
+    .smi-material__content.<?= $document['document_extension']; ?>:before {
+        background-image: url(<?= $document['document_ico']; ?>);}    
     <?php
     }
     ?>
