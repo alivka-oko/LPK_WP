@@ -94,6 +94,7 @@
         }
         let children = menu.querySelectorAll('.menu-item-has-children');
         for (child of children) {
+            // Подменю
             child.classList.add('submenu')
             let div = document.createElement('div');
             div.classList.add('dropdown-submenu');
@@ -101,7 +102,8 @@
             ul.classList.add('list-submenu');
             div.append(ul);
             child.append(div);
-            if (child.classList.contains('active')) {
+            // Дополнительное меню ниже, повтор подменю
+            if (child.classList.contains('active') || child.classList.contains('current-menu-parent')) {
                 let nav = document.createElement("nav");
                 nav.className = "navbar navbar-expand-lg navbar-light bg-secondMenu"; //+
                 let container = document.createElement("div");
@@ -113,11 +115,14 @@
                 let sub_menu = child.querySelector('.dropdown-submenu').querySelectorAll('a.nav-link');
                 sub_menu.forEach(element => {
                     let li = createNavItem(element.innerHTML, element.href);
+                    if (element.closest('li').classList.contains('active')) li.classList.add('active');
                     sub_ul.append(li);
-                });                
+                });
                 container.appendChild(sub_ul);
                 container_li = container.querySelectorAll('li');
                 container_li[0].classList.add('first');
+                if (child.classList.contains('active')) container_li[0].classList.add('active');
+                else container_li[0].classList.remove('active');
                 container_li[container_li.length - 1].classList.add('last');
                 nav.appendChild(container);
                 header.appendChild(nav);
