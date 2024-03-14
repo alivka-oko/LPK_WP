@@ -75,12 +75,99 @@
         <?php ?>
     </header>
 
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const header = document.querySelector('.header');
+            const menu = document.querySelector('.mainMenu');
+
+            // Добавление класса 'active' к текущему элементу меню
+            const currentMenuItem = menu.querySelector('.current-menu-item');
+            if (currentMenuItem) {
+                currentMenuItem.classList.add('active');
+            }
+
+            // Добавление классов 'first' и 'last' к первому и последнему элементам меню
+            const firstLevelItems = document.querySelectorAll('.mainMenu>li');
+            if (firstLevelItems.length > 0) {
+                firstLevelItems[0].classList.add('first');
+                firstLevelItems[firstLevelItems.length - 1].classList.add('last');
+            }
+
+            // Добавление класса 'nav-link' ко всем ссылкам в меню
+            const links = menu.querySelectorAll('li');
+            links.forEach(link => {
+                const anchor = link.querySelector('a');
+                anchor.classList.add('nav-link');
+            });
+
+            // Добавление подменю
+            const submenuItems = menu.querySelectorAll('.menu-item-has-children');
+            submenuItems.forEach(child => {
+                child.classList.add('submenu');
+                const div = document.createElement('div');
+                div.classList.add('dropdown-submenu');
+                const ul = child.querySelector('ul');
+                if (ul) {
+                    ul.classList.add('list-submenu');
+                    div.appendChild(ul);
+                    child.appendChild(div);
+                }
+
+                // Добавление дополнительного меню
+                if (child.classList.contains('active') || child.classList.contains('current-menu-parent')) {
+                    const nav = document.createElement("nav");
+                    nav.className = "navbar navbar-expand-lg navbar-light bg-secondMenu";
+                    const container = document.createElement("div");
+                    container.className = "container";
+                    const subUl = document.createElement("ul");
+                    subUl.className = "nav secondMenu";
+                    subUl.id = "navbar";
+
+                    const subMenuItems = child.querySelector('.dropdown-submenu').querySelectorAll('a.nav-link');
+                    subMenuItems.forEach(element => {
+                        const li = createNavItem(element.textContent, element.href);
+                        if (element.closest('li').classList.contains('active')) {
+                            li.classList.add('active');
+                        }
+                        subUl.appendChild(li);
+                    });
+
+                    container.appendChild(subUl);
+                    const containerLi = container.querySelectorAll('li');
+                    containerLi[0].classList.add('first');
+                    if (child.classList.contains('active')) {
+                        containerLi[0].classList.add('active');
+                    } else {
+                        containerLi[0].classList.remove('active');
+                    }
+                    containerLi[containerLi.length - 1].classList.add('last');
+                    nav.appendChild(container);
+                    header.appendChild(nav);
+                }
+            });
+        });
+
+        // Функция для создания элемента списка
+        function createNavItem(text, href) {
+            const li = document.createElement("li");
+            li.className = "nav-item";
+            const a = document.createElement("a");
+            a.className = "nav-link";
+            a.href = href;
+            a.textContent = text;
+            li.appendChild(a);
+            return li;
+        }
+    </script> -->
+
     <script>
         let header = document.querySelector('.header');
 
         let menu = document.querySelector('.mainMenu');
         let current_li = menu.querySelector('.current-menu-item');
-        current_li.classList.add('active');
+        if (current_li) current_li.classList.add('active');
+
 
         let firstlvl = document.querySelectorAll('.mainMenu>li');
         let first_elem = firstlvl[0].classList.add('first');
