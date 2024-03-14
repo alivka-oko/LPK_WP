@@ -22,7 +22,7 @@
 
 <body>
 
-    <header>
+    <header class="header">
 
         <?php get_sidebar() ?>
 
@@ -76,6 +76,8 @@
     </header>
 
     <script>
+        let header = document.querySelector('.header');
+
         let menu = document.querySelector('.mainMenu');
         let current_li = menu.querySelector('.current-menu-item');
         current_li.classList.add('active');
@@ -99,5 +101,42 @@
             ul.classList.add('list-submenu');
             div.append(ul);
             child.append(div);
+            if (child.classList.contains('active')) {
+                let nav = document.createElement("nav");
+                nav.className = "navbar navbar-expand-lg navbar-light bg-secondMenu"; //+
+                let container = document.createElement("div");
+                container.className = "container";//+
+                let sub_ul = document.createElement("ul");
+                sub_ul.className = "nav secondMenu";
+                sub_ul.setAttribute('id', 'navbar');
+
+                let sub_menu = child.querySelector('.dropdown-submenu').querySelectorAll('a.nav-link');
+                sub_menu.forEach(element => {
+                    let li = createNavItem(element.innerHTML, element.href);
+                    sub_ul.append(li);
+                });                
+                container.appendChild(sub_ul);
+                container_li = container.querySelectorAll('li');
+                container_li[0].classList.add('first');
+                container_li[container_li.length - 1].classList.add('last');
+                nav.appendChild(container);
+                header.appendChild(nav);
+            }
         }
+
+        // Функция для создания элемента списка
+        function createNavItem(text, href) {
+            var li = document.createElement("li");
+            li.className = "nav-item";
+
+            var a = document.createElement("a");
+            a.className = "nav-link";
+            a.href = href;
+            a.textContent = text;
+
+            li.appendChild(a);
+            return li;
+        }
+
+
     </script>
