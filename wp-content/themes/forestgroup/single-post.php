@@ -1,9 +1,18 @@
 <?php get_header() ?>
-<section class="SecondBanner" style="background: url(/assets/template/images/banner/backgroundBanner1.jpg);">
+<section class="SecondBanner" style="background: url(<?= CFS()->get('background') ?>);">
     <div class="container">
         <div class="titleText">
-            <h1>Пеллеты</h1>
-
+            <h1><?= the_title() ?></h1>
+            <h3>
+                <?php
+                $product_type = CFS()->get('product_type');
+                if ($product_type) {
+                    foreach ($product_type as $key => $value) {
+                        echo $value;
+                    };
+                };
+                ?>
+            </h3>
         </div>
     </div>
 </section>
@@ -11,71 +20,54 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-
                 <div class="products__price">
                     <?= CFS()->get('table') ?>
                 </div>
                 <div class="products__btn-order">
-                    <button class="btn btn-green" data-toggle="modal" data-target="#callbackModal">Связаться с
-                        менеджером</button>
+                    <button class="btn btn-green" data-toggle="modal" data-target="#callbackModal"><?= CFS()->get('button_text') ?></button>
                 </div>
             </div>
             <div class="col-md-6">
                 <div id="slider" class="flexslider">
                     <div class="flex-viewport" style="overflow: hidden; position: relative;">
                         <ul class="slides list" style="width: 1400%; transition-duration: 0s; transform: translate3d(-450px, 0px, 0px);">
-                            <li class="slides__item flex-active-slide" style="width: 450px; margin-right: 0px; float: left; display: block;" data-thumb-alt="">
-                                <a href="/assets/gallery/17/93.jpg" data-lightbox="17" title="Пеллеты" class="slides__item-link">
-                                    <img src="/assets/gallery/17/93.jpg" width="600" alt="" class="slides__item-img" draggable="false">
-                                    <span class="zoom">
-                                        <svg width="16" height="16" viewBox="0 0 16 16">
-                                            <path d="M588,203h-3v-2h3v-3h2v3A2,2,0,0,1,588,203Zm0-14h-3v-2h3a2,2,0,0,1,2,2v3h-2v-3Zm-2,3v6a1,1,0,0,1-1,1h-6a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h6A1,1,0,0,1,586,192Zm-2,1h-4v4h4v-4Zm-8-1h-2v-3a2,2,0,0,1,2-2h3v2h-3v3Zm0,9h3v2h-3a2,2,0,0,1-2-2v-3h2v3Z" transform="translate(-574 -187)"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="slides__item" data-thumb-alt="" style="width: 450px; margin-right: 0px; float: left; display: block;">
-                                <a href="/assets/gallery/17/89.jpg" data-lightbox="17" title="Пеллеты" class="slides__item-link">
-                                    <img src="/assets/gallery/17/89.jpg" width="600" alt="" class="slides__item-img" draggable="false">
-                                    <span class="zoom">
-                                        <svg width="16" height="16" viewBox="0 0 16 16">
-                                            <path d="M588,203h-3v-2h3v-3h2v3A2,2,0,0,1,588,203Zm0-14h-3v-2h3a2,2,0,0,1,2,2v3h-2v-3Zm-2,3v6a1,1,0,0,1-1,1h-6a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h6A1,1,0,0,1,586,192Zm-2,1h-4v4h4v-4Zm-8-1h-2v-3a2,2,0,0,1,2-2h3v2h-3v3Zm0,9h3v2h-3a2,2,0,0,1-2-2v-3h2v3Z" transform="translate(-574 -187)"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </li>
+                            <?php
+                            $images = CFS()->get('gallery');
+                            if ($images) {
+                                foreach ($images as $image) {
+                                    if ($image == $images[0]) {
+                            ?>
+                                        <li class="slides__item flex-active-slide" style="width: 450px; margin-right: 0px; float: left; display: block;" data-thumb-alt="">
+                                            <a href="<?= $image['image'] ?>" data-lightbox="17" title="<?= the_title() ?>" class="slides__item-link">
+                                                <img src="<?= $image['image'] ?>" width="600" alt="" class="slides__item-img" draggable="false">
+                                                <span class="zoom">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16">
+                                                        <path d="M588,203h-3v-2h3v-3h2v3A2,2,0,0,1,588,203Zm0-14h-3v-2h3a2,2,0,0,1,2,2v3h-2v-3Zm-2,3v6a1,1,0,0,1-1,1h-6a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h6A1,1,0,0,1,586,192Zm-2,1h-4v4h4v-4Zm-8-1h-2v-3a2,2,0,0,1,2-2h3v2h-3v3Zm0,9h3v2h-3a2,2,0,0,1-2-2v-3h2v3Z" transform="translate(-574 -187)"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        <?php
 
-                            <li class="slides__item" data-thumb-alt="" style="width: 450px; margin-right: 0px; float: left; display: block;">
-                                <a href="/assets/gallery/17/90.jpg" data-lightbox="17" title="Пеллеты" class="slides__item-link">
-                                    <img src="/assets/gallery/17/90.jpg" width="600" alt="" class="slides__item-img" draggable="false">
-                                    <span class="zoom">
-                                        <svg width="16" height="16" viewBox="0 0 16 16">
-                                            <path d="M588,203h-3v-2h3v-3h2v3A2,2,0,0,1,588,203Zm0-14h-3v-2h3a2,2,0,0,1,2,2v3h-2v-3Zm-2,3v6a1,1,0,0,1-1,1h-6a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h6A1,1,0,0,1,586,192Zm-2,1h-4v4h4v-4Zm-8-1h-2v-3a2,2,0,0,1,2-2h3v2h-3v3Zm0,9h3v2h-3a2,2,0,0,1-2-2v-3h2v3Z" transform="translate(-574 -187)"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </li>
+                                    } else {
+                                        ?>
+                                        <li class="slides__item" data-thumb-alt="" style="width: 450px; margin-right: 0px; float: left; display: block;">
+                                            <a href="<?= $image['image'] ?>" data-lightbox="17" title="<?= the_title() ?>" class="slides__item-link">
+                                                <img src="<?= $image['image'] ?>" width="600" alt="" class="slides__item-img" draggable="false">
+                                                <span class="zoom">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16">
+                                                        <path d="M588,203h-3v-2h3v-3h2v3A2,2,0,0,1,588,203Zm0-14h-3v-2h3a2,2,0,0,1,2,2v3h-2v-3Zm-2,3v6a1,1,0,0,1-1,1h-6a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h6A1,1,0,0,1,586,192Zm-2,1h-4v4h4v-4Zm-8-1h-2v-3a2,2,0,0,1,2-2h3v2h-3v3Zm0,9h3v2h-3a2,2,0,0,1-2-2v-3h2v3Z" transform="translate(-574 -187)"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    <?
+                                    }
+                                    ?>
+                            <?php
+                                };
+                            }
+                            ?>
 
-                            <li class="slides__item" data-thumb-alt="" style="width: 450px; margin-right: 0px; float: left; display: block;">
-                                <a href="/assets/gallery/17/92.jpg" data-lightbox="17" title="Пеллеты" class="slides__item-link">
-                                    <img src="/assets/gallery/17/92.jpg" width="600" alt="" class="slides__item-img" draggable="false">
-                                    <span class="zoom">
-                                        <svg width="16" height="16" viewBox="0 0 16 16">
-                                            <path d="M588,203h-3v-2h3v-3h2v3A2,2,0,0,1,588,203Zm0-14h-3v-2h3a2,2,0,0,1,2,2v3h-2v-3Zm-2,3v6a1,1,0,0,1-1,1h-6a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h6A1,1,0,0,1,586,192Zm-2,1h-4v4h4v-4Zm-8-1h-2v-3a2,2,0,0,1,2-2h3v2h-3v3Zm0,9h3v2h-3a2,2,0,0,1-2-2v-3h2v3Z" transform="translate(-574 -187)"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="slides__item" data-thumb-alt="" style="width: 450px; margin-right: 0px; float: left; display: block;">
-                                <a href="/assets/gallery/17/91.jpg" data-lightbox="17" title="Пеллеты" class="slides__item-link">
-                                    <img src="/assets/gallery/17/91.jpg" width="600" alt="" class="slides__item-img" draggable="false">
-                                    <span class="zoom">
-                                        <svg width="16" height="16" viewBox="0 0 16 16">
-                                            <path d="M588,203h-3v-2h3v-3h2v3A2,2,0,0,1,588,203Zm0-14h-3v-2h3a2,2,0,0,1,2,2v3h-2v-3Zm-2,3v6a1,1,0,0,1-1,1h-6a1,1,0,0,1-1-1v-6a1,1,0,0,1,1-1h6A1,1,0,0,1,586,192Zm-2,1h-4v4h4v-4Zm-8-1h-2v-3a2,2,0,0,1,2-2h3v2h-3v3Zm0,9h3v2h-3a2,2,0,0,1-2-2v-3h2v3Z" transform="translate(-574 -187)"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </li>
                         </ul>
                     </div>
                     <ol class="flex-control-nav flex-control-thumbs">
@@ -94,21 +86,29 @@
 
                     <div class="flex-viewport" style="overflow: hidden; position: relative;">
                         <ul class="slides list" style="width: 1000%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
-                            <li class="flex-active-slide" style="width: 123px; margin-right: 5px; float: left; display: block;">
-                                <img src="/assets/gallery/17/93.jpg" alt="" draggable="false">
-                            </li>
-                            <li style="width: 123px; margin-right: 5px; float: left; display: block;">
-                                <img src="/assets/gallery/17/89.jpg" alt="" draggable="false">
-                            </li>
-                            <li style="width: 123px; margin-right: 5px; float: left; display: block;">
-                                <img src="/assets/gallery/17/90.jpg" alt="" draggable="false">
-                            </li>
-                            <li style="width: 123px; margin-right: 5px; float: left; display: block;">
-                                <img src="/assets/gallery/17/92.jpg" alt="" draggable="false">
-                            </li>
-                            <li style="width: 123px; margin-right: 5px; float: left; display: block;">
-                                <img src="/assets/gallery/17/91.jpg" alt="" draggable="false">
-                            </li>
+                            <?php
+                            $small_images = CFS()->get('gallery');
+                            if ($small_images) {
+                                foreach ($small_images as $small_image) {
+                                    if ($small_image == $small_images[0]) {
+                            ?>
+                                        <li class="flex-active-slide" style="width: 123px; margin-right: 5px; float: left; display: block;">
+                                            <img src="<?= $small_image['image'] ?>" alt="" draggable="false">
+                                        </li>
+                                    <?php
+
+                                    } else {
+                                    ?>
+                                        <li style="width: 123px; margin-right: 5px; float: left; display: block;">
+                                            <img src="<?= $small_image['image'] ?>" alt="" draggable="false">
+                                        </li>
+                                    <?
+                                    }
+                                    ?>
+                            <?php
+                                };
+                            }
+                            ?>
                         </ul>
                     </div>
                     <ul class="flex-direction-nav">
@@ -136,53 +136,161 @@
                     </ul>
                     <div class="products__tab-content" id="productsTabContent">
                         <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
-                            <?= CFS()->get('description')?>
+                            <?= CFS()->get('description') ?>
                         </div>
                         <div class="tab-pane fade" id="specification" role="tabpanel" aria-labelledby="specification-tab">
-                            <p>В наличии пеллеты двух типов, производимые по разным техническим процессам.</p>
-                            <table class="w-100 mb-3">
-                                <thead>
-                                    <tr>
-                                        <th>Светлые пеллеты</th>
-                                        <th>Светло-серые пеллеты</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="small">
-                                            <ul>
-                                                <li>100% Хвойная древесина</li>
-                                                <li>Диаметр: 6 - 8 мм</li>
-                                                <li>Теплотворность до 19.3 МДж/кг</li>
-                                                <li>Влажность: до 5%</li>
-                                                <li>Зольность, до 0.3%</li>
-                                                <li>Упаковка: Мешки, биг-беги</li>
-                                                <li>Плотность пеллет 1400-1500 кг/м3</li>
-                                                <li>Насыпная плотность, 730 кг/м3</li>
-                                            </ul>
-                                        </td>
-                                        <td class="small">
-                                            <ul>
-                                                <li>Хвойная древесина + Кора</li>
-                                                <li>Диаметр: 6 - 8 мм</li>
-                                                <li>Теплотворность до 17 МДж/кг</li>
-                                                <li>Влажность: до 8%</li>
-                                                <li>Зольность, до 0.8%</li>
-                                                <li>Упаковка: Мешки, биг-беги</li>
-                                                <li>Плотность пеллет 1300-1400 кг/м3</li>
-                                                <li>Насыпная плотность, 700 кг/м3</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p>Светлые пеллеты отличает большая плотность, меньшая влажность и более высокая
-                                теплоёмкость. Это премиальные пеллеты, которые дают максимальную эффективность и
-                                меньший выход золы. Отлично подходят для отопления собственного дома.</p>
-                            <p>Светлыо-серые пеллеты более легкие, дешевые и отлично подходят для производственных
-                                предприятий, которым требуются большие объемы предприятий.</p>
+                            <!-- ГОСТ -->
+                            <?php
+                            $standarts = CFS()->get('standart');
+                            if ($standarts) {
+                            ?>
+                                <div class="characteristic">
+                                    <?php
+                                    foreach ($standarts as $standart) {
+                                    ?>
+                                        <div class="characteristic__item"><span class="characteristic__item-title"><?= $standart['standart_name'] ?></span><?= $standart['standart_value'] ?></div>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                            <?php
+                            }
+                            ?>
+                            <!-- Размеры и количество -->
+                            <?php
+                            $dimensions = CFS()->get('dimensions');
+                            if ($dimensions) {
+                            ?>
+                                <h4>Размеры и количество</h4>
+                                <table class="table table-striped sizes">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-1">Толщина</th>
+                                            <th class="col-1">Ширина</th>
+                                            <th class="col-1">Длина</th>
+                                            <th class="col-2">Количество, шт. в м<sup>3</sup></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        foreach ($dimensions as $dimension) {
+                                        ?>
+                                            <tr>
+                                                <td><?= $dimension['thickness'] ?></td>
+                                                <td><?= $dimension['width'] ?></td>
+                                                <td><?= $dimension['length'] ?></td>
+                                                <td><?= $dimension['quantity'] ?></td>
+                                            </tr>
+                                        <?php
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            <?php
+                            }
+                            ?>
+                            <!-- Инструкция -->
+                            <?php
+                            $manuals = CFS()->get('manuals');
+                            if ($manuals) {
+                            ?>
+                                <h4><?= CFS()->get('manual_text') ?></h4>
+                                <ol class="lumberStorage">
+                                    <?php
+                                    foreach ($manuals as $manual) {
+                                    ?>
+                                        <li><span><?= $manual['manual'] ?></span></li>
+                                    <?php
+                                    }
+                                    ?>
+                                </ol>
+                                <p><?= CFS()->get('manual_text_add') ?></p>
+                            <?php
+                            }
+                            ?>
 
-                            <h3>Сертификаты</h3>
+                            <!-- Типы -->
+                            <p><?= CFS()->get('type_text'); ?></p>
+                            <?php
+                            $type_tables = CFS()->get('type_tables');
+                            if ($type_tables) {
+                            ?>
+                                <table class="w-100 mb-3">
+                                    <thead>
+                                        <tr>
+                                            <?php
+                                            for ($i = 0; $i <= count($type_tables) - 1; $i++) {
+                                            ?>
+                                                <th><?= CFS()->get('type_tables')[$i]['type_name']; ?></th>
+                                            <?php
+                                            }; ?>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <?php
+                                            // print_r($type_tables[0]['type_values'][0]['type_value']);
+                                            foreach ($type_tables as $type) {
+                                            ?>
+                                                <td class="small">
+                                                    <ul>
+                                                        <?php
+                                                        foreach ($type['type_values'] as $type) {
+                                                        ?>
+                                                            <li><?= $type['type_value'] ?></li>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                    </ul>
+                                                </td>
+                                            <?php
+                                            }
+                                            ?>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            <?php
+                            }
+                            ?>
+                            <p><?= CFS()->get('type_text_add') ?></p>
+                            <!-- Сертификаты -->
+                            <?php $certificates = CFS()->get('certificates');
+                            if ($certificates) {
+                            ?>
+                                <h3>Сертификаты</h3>
+                                <?php foreach ($certificates as $document) {
+                                    $url = $document['document_file'];
+                                    $headers = get_headers($url, true);
+
+                                    // Получение MIME-типа контента
+                                    $contentType = isset($headers['Content-Type']) ? $headers['Content-Type'] : 'application/octet-stream';
+                                    $extension = pathinfo($url, PATHINFO_EXTENSION);
+
+                                    // Получение размера документа
+                                    $contentLength = isset($headers['Content-Length']) ? $headers['Content-Length'] : 0;
+                                    $sizeInMb = number_format($contentLength / (1024 * 1024), 2) . ' МБ';
+
+                                ?>
+                                    <div class="smi-material__content mb-3">
+                                        <a class="smi-material__title" href="<?= $url ?>" target="_blank">
+                                            <?= $document['document_name'] ?>
+                                        </a>
+                                        <div class="description">
+                                            <?= $document['document_desc'] ?>
+                                        </div>
+                                        <span class="smi-material__doc">
+                                            <?= strtoupper($extension) ?>
+                                        </span>
+                                        <span class="smi-material__value">
+                                            <?= $sizeInMb ?>
+                                        </span>
+                                    </div>
+                                <?php
+                                } ?>
+                            <?php
+                            }
+                            ?>
+                            <!-- <h3>Сертификаты</h3>
                             <div class="smi-material__content mb-3">
                                 <a class="smi-material__title" href="https://forest-groups.ru/assets/doc/light-pellets.pdf" target="_blank">СЕРТИФИКАТ ИСПЫТАНИЙ</a>
                                 <div class="description">Светлые пеллеты</div>
@@ -194,7 +302,7 @@
                                 <div class="description">Светло-серые пеллеты</div>
                                 <span class="smi-material__doc">PDF</span>
                                 <span class="smi-material__value">0.28 МБ</span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -230,6 +338,18 @@
     let div_product = document.querySelector('.products__price');
     let table_product = div_product.querySelector('table');
     table_product.classList.add('products__price-table');
+    table_product.setAttribute('width','100%');
+    table_product.setAttribute('border','0');
+    table_product.setAttribute('cellspacing','0');
+    table_product.setAttribute('cellpadding','0');
+    // <table width="100%" border="0" cellspacing="0" cellpadding="0" class="products__price-table">
+    
+
+    let documents = document.querySelectorAll('.smi-material__content');
+    documents.forEach(document_file => {
+        let format = document_file.querySelector('.smi-material__doc');
+        document_file.classList.add(format.innerHTML.trim())
+    });
 </script>
 <?php
 get_footer();

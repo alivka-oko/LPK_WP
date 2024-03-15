@@ -22,8 +22,7 @@
 
 <body>
 
-    <header class="header">
-
+    <header class="header">        
         <?php get_sidebar() ?>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -39,7 +38,7 @@
                         'items_wrap' => '%3$s',
                         'add_li_class' => 'nav-item',
                     ])
-                        ?>
+                    ?>
                 </ul>
 
                 <div class="right-block d-flex">
@@ -62,10 +61,8 @@
                 </div>
                 <div class="menuMobil">
                     <button class="menuMobil_btn" type="button">
-                        <svg version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <path
-                                d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z">
+                        <svg version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z">
                             </path>
                         </svg>
                     </button>
@@ -74,92 +71,6 @@
         </nav>
         <?php ?>
     </header>
-
-
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const header = document.querySelector('.header');
-            const menu = document.querySelector('.mainMenu');
-
-            // Добавление класса 'active' к текущему элементу меню
-            const currentMenuItem = menu.querySelector('.current-menu-item');
-            if (currentMenuItem) {
-                currentMenuItem.classList.add('active');
-            }
-
-            // Добавление классов 'first' и 'last' к первому и последнему элементам меню
-            const firstLevelItems = document.querySelectorAll('.mainMenu>li');
-            if (firstLevelItems.length > 0) {
-                firstLevelItems[0].classList.add('first');
-                firstLevelItems[firstLevelItems.length - 1].classList.add('last');
-            }
-
-            // Добавление класса 'nav-link' ко всем ссылкам в меню
-            const links = menu.querySelectorAll('li');
-            links.forEach(link => {
-                const anchor = link.querySelector('a');
-                anchor.classList.add('nav-link');
-            });
-
-            // Добавление подменю
-            const submenuItems = menu.querySelectorAll('.menu-item-has-children');
-            submenuItems.forEach(child => {
-                child.classList.add('submenu');
-                const div = document.createElement('div');
-                div.classList.add('dropdown-submenu');
-                const ul = child.querySelector('ul');
-                if (ul) {
-                    ul.classList.add('list-submenu');
-                    div.appendChild(ul);
-                    child.appendChild(div);
-                }
-
-                // Добавление дополнительного меню
-                if (child.classList.contains('active') || child.classList.contains('current-menu-parent')) {
-                    const nav = document.createElement("nav");
-                    nav.className = "navbar navbar-expand-lg navbar-light bg-secondMenu";
-                    const container = document.createElement("div");
-                    container.className = "container";
-                    const subUl = document.createElement("ul");
-                    subUl.className = "nav secondMenu";
-                    subUl.id = "navbar";
-
-                    const subMenuItems = child.querySelector('.dropdown-submenu').querySelectorAll('a.nav-link');
-                    subMenuItems.forEach(element => {
-                        const li = createNavItem(element.textContent, element.href);
-                        if (element.closest('li').classList.contains('active')) {
-                            li.classList.add('active');
-                        }
-                        subUl.appendChild(li);
-                    });
-
-                    container.appendChild(subUl);
-                    const containerLi = container.querySelectorAll('li');
-                    containerLi[0].classList.add('first');
-                    if (child.classList.contains('active')) {
-                        containerLi[0].classList.add('active');
-                    } else {
-                        containerLi[0].classList.remove('active');
-                    }
-                    containerLi[containerLi.length - 1].classList.add('last');
-                    nav.appendChild(container);
-                    header.appendChild(nav);
-                }
-            });
-        });
-
-        // Функция для создания элемента списка
-        function createNavItem(text, href) {
-            const li = document.createElement("li");
-            li.className = "nav-item";
-            const a = document.createElement("a");
-            a.className = "nav-link";
-            a.href = href;
-            a.textContent = text;
-            li.appendChild(a);
-            return li;
-        }
-    </script> -->
 
     <script>
         let header = document.querySelector('.header');
@@ -194,7 +105,7 @@
                 let nav = document.createElement("nav");
                 nav.className = "navbar navbar-expand-lg navbar-light bg-secondMenu"; //+
                 let container = document.createElement("div");
-                container.className = "container";//+
+                container.className = "container"; //+
                 let sub_ul = document.createElement("ul");
                 sub_ul.className = "nav secondMenu";
                 sub_ul.setAttribute('id', 'navbar');
@@ -229,6 +140,4 @@
             li.appendChild(a);
             return li;
         }
-
-
     </script>

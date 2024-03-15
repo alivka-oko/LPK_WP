@@ -207,7 +207,7 @@ html[xmlns] .flexslider .slides {
     display: block;
     width: 8px;
     height: 14px;
-    background: url(/assets/template/images/icon/arrow.svg) 0 0 no-repeat;
+    background: url(../images/icon/arrow.svg) 0 0 no-repeat;
     margin: 13px 15px;
     background-size: 18px;
 }

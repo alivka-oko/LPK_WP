@@ -1,5 +1,6 @@
 body.lb-disable-scrolling {
   overflow: hidden;
+  padding-right: 17px;
 }
 
 .lightboxOverlay {
@@ -7,9 +8,9 @@ body.lb-disable-scrolling {
   top: 0;
   left: 0;
   z-index: 9999;
-  background-color: black;
+  background-color: #ffffff;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
+  opacity: 0.95;
   display: none;
 }
 
@@ -21,7 +22,6 @@ body.lb-disable-scrolling {
   text-align: center;
   line-height: 0;
   font-weight: normal;
-  outline: none;
 }
 
 .lightbox .lb-image {
@@ -32,7 +32,7 @@ body.lb-disable-scrolling {
   border-radius: 3px;
 
   /* Image border */
-  border: 4px solid white;
+  border: 10px solid white;
 }
 
 .lightbox a img {
@@ -41,7 +41,7 @@ body.lb-disable-scrolling {
 
 .lb-outerContainer {
   position: relative;
-  zoom: 1;/**/
+  *zoom: 1;
   width: 250px;
   height: 250px;
   margin: 0 auto;
@@ -69,11 +69,7 @@ body.lb-disable-scrolling {
 }
 
 .lb-cancel {
-  display: block;
-  width: 32px;
-  height: 32px;
-  margin: 0 auto;
-  background: url(../images/loading.gif) no-repeat;
+    display: none;
 }
 
 .lb-nav {
@@ -83,15 +79,11 @@ body.lb-disable-scrolling {
   height: 100%;
   width: 100%;
   z-index: 10;
+  padding: 31% 0;
 }
 
 .lb-container > .nav {
   left: 0;
-}
-
-.lb-nav a {
-  outline: none;
-  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
 }
 
 .lb-prev, .lb-next {
@@ -100,46 +92,51 @@ body.lb-disable-scrolling {
   display: block;
 }
 
-.lb-nav a.lb-prev {
-  width: 34%;
-  left: 0;
-  float: left;
-  background: url(../images/prev.png) left 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
-}
-
-.lb-nav a.lb-prev:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
+.lb-nav a.lb-prev,
 .lb-nav a.lb-next {
-  width: 64%;
-  right: 0;
-  float: right;
-  background: url(../images/next.png) right 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 20px;
+    float: left;
+    background: #ffffff;
+    border-radius: .25rem;
 }
-
+.lb-nav a.lb-next {
+    left: 100%;
+    margin-left: -60px;
+}
+.lb-nav a.lb-prev:before,
+.lb-nav a.lb-next:before{
+    content: "";
+    display: block;
+    width: 8px;
+    height: 14px;
+    background: url(../images/icon/arrow.svg) 0 0 no-repeat;
+    margin: 13px 15px;
+    background-size: 18px;
+}
+.lb-nav a.lb-next:before{
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    margin-left: 17px;
+}
+.lb-nav a.lb-prev:hover,
 .lb-nav a.lb-next:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
+  background: #28a745;
+}
+.lb-nav a.lb-prev:hover:before,
+.lb-nav a.lb-next:hover:before {
+  background-position: 0 -16px;
 }
 
 .lb-dataContainer {
   margin: 0 auto;
   padding-top: 5px;
-  zoom: 1;/**/
+  *zoom: 1;
   width: 100%;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -157,16 +154,16 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-details {
-  width: 85%;
+  width: 100%;
   float: left;
   text-align: left;
   line-height: 1.1em;
+  text-align: center;
 }
 
 .lb-data .lb-caption {
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 1em;
+    color: #444444;
+    font-weight: normal;
 }
 
 .lb-data .lb-caption a {
@@ -183,22 +180,16 @@ body.lb-disable-scrolling {
 
 .lb-data .lb-close {
   display: block;
-  float: right;
-  width: 30px;
-  height: 30px;
-  background: url(../images/close.png) top right no-repeat;
-  text-align: right;
-  outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
-  -webkit-transition: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  width: 15px;
+  height: 15px;
+  background-image: url(../images/icon/icon-close.svg);
+  position: absolute;
+  top: -30px;
+  right: 37px;
+  cursor: pointer;
+  transition: all .55s ease;
 }
 
 .lb-data .lb-close:hover {
-  cursor: pointer;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
+  transform: rotate(270deg);
 }

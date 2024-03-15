@@ -116,3 +116,28 @@ add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 //     return $template;
 // }
 // add_filter('template_include', 'custom_single_template');
+
+// _____________________закинуть переменную
+
+add_action('customize_register', function ($customizer) {
+    $customizer->add_section(
+        'example_section_one',
+        array(
+            'title' => 'Настройки сайта',
+            'description' => 'Контактная информация на сайте',
+            'priority' => 11,
+        )
+    );
+    $customizer->add_setting(
+        'phone', array("default" => "84822123456")
+    );
+    $customizer->add_control(
+        'phone',
+        array(
+            'label' => 'Телефон',
+            'section' => 'example_section_one',
+            'type' => 'text',
+        )
+    );
+});
+//  использовать get_theme_mod('phone', ''); 
