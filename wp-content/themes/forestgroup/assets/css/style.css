@@ -931,7 +931,7 @@ header .navbar.bg-secondMenu {
     display: block;
     width: 28px;
     height: 37px;
-    /* background-image: url(/wp-content/uploads/2024/03/icon-press-docs.svg); */
+    background-image: url(/wp-content/uploads/2024/03/icon-press-docs.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;

@@ -50,7 +50,7 @@
                 </div>
                 <div class="block right col-sm-12 col-md-3">
                     <h5>Напишите нам:</h5>
-                    <a target="_blank" href="mailto:mail@forest-groups.ru?subject=Вопрос с сайта ФОРЕСТ ГРУПП">mail@forest-groups.ru</a>
+                    <a target="_blank" href="mailto:<?= CFS()->get('s_mail',71) ?>?subject=Вопрос с сайта"><?= CFS()->get('s_mail',71) ?></a>
 
                     <div class="social decktop">
                         <a target="_blank" href="https://t.me/ForestGroups_bot">
@@ -100,13 +100,13 @@
         <div class="container">
             <div class="row">
                 <div class="block left col-sm-12 col-md-4">
-                    <a href="<?= CFS()->get( 's_footer_doc-file', 71 );?>" target="_blank"><?= CFS()->get( 's_footer_doc-name', 71 );?></a>
+                    <a href="<?= CFS()->get('s_footer_doc-file', 71); ?>" target="_blank"><?= CFS()->get('s_footer_doc-name', 71); ?></a>
                 </div>
                 <div class="block center col-sm-12 col-md-4">
-                    2018 - 2024 © <?= CFS()->get( 's_footer_company', 71 );?>. Все права защищены.
+                    2018 - 2024 © <?= CFS()->get('s_footer_company', 71); ?>. Все права защищены.
                 </div>
                 <div class="block right col-sm-12 col-md-4">
-                <?= CFS()->get( 's_footer_info', 71 );?>
+                    <?= CFS()->get('s_footer_info', 71); ?>
                 </div>
             </div>
         </div>
@@ -160,18 +160,15 @@
 </div>
 <!-- End modal -->
 <!-- Modal -->
-<div class="modal fade bd-example-modal-lg" id="VideoPresentationModal" tabindex="-1"
-        aria-labelledby="VideoPresentationModalLabel" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="VideoPresentationModal">
-                    <iframe src="https://www.youtube.com/embed/BSzYokB2CCI" title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen=""></iframe>
-                </div>
+<div class="modal fade bd-example-modal-lg" id="VideoPresentationModal" tabindex="-1" aria-labelledby="VideoPresentationModalLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="VideoPresentationModal">
+                <iframe src="https://www.youtube.com/embed/BSzYokB2CCI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
             </div>
         </div>
     </div>
+</div>
 <!-- End modal -->
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
