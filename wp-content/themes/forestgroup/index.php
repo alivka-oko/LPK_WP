@@ -259,4 +259,15 @@ Template Name: Главная
         </div>
     </div>
 </section>
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="VideoPresentationModal" tabindex="-1" aria-labelledby="VideoPresentationModalLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="VideoPresentationModal">
+                <iframe src="https://www.youtube.com/embed/BSzYokB2CCI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End modal -->
 <?php get_footer() ?>

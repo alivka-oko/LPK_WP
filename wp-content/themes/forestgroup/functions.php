@@ -129,7 +129,8 @@ add_action('customize_register', function ($customizer) {
         )
     );
     $customizer->add_setting(
-        'phone', array("default" => "84822123456")
+        'phone',
+        array("default" => "84822123456")
     );
     $customizer->add_control(
         'phone',
@@ -141,3 +142,51 @@ add_action('customize_register', function ($customizer) {
     );
 });
 //  использовать get_theme_mod('phone', ''); 
+
+// 
+function theme_register_sidebar()
+{
+    register_sidebar(array(
+        'name' => __('Footer Sidebar', 'your-text-domain'),
+        'id' => 'footer_sidebar',
+        'description' => __('Widgets in this area will be shown in the footer.', 'your-text-domain'),
+        'before_widget' => '<div class="block nav-block col-sm-12 col-md-4">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5>',
+        'after_title' => '</h5>',
+    ));
+}
+
+add_action('widgets_init', 'theme_register_sidebar');
+
+// ________убираем лишние теги в CF7_____________
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+function custom_single_post_template($single_template)
+{
+    global $post;
+
+    // Получаем список рубрик поста
+    $categories = get_the_category($post->ID);
+
+    // Проверяем, есть ли среди рубрик рубрика "building"
+    foreach ($categories as $category) {
+        if ($category->slug === 'building') {
+            // Если рубрика "building" есть, возвращаем путь к шаблону для неё
+            return locate_template(array('single-post-building.php', $single_template));
+        }
+    }
+
+    // Если рубрика "building" не найдена, просто возвращаем текущий шаблон поста
+    return $single_template;
+}
+add_filter('single_template', 'custom_single_post_template');
+
+function remove_taxonomy_image_size_attributes($html, $taxonomy, $size)
+{
+    // Удаляем атрибуты width и height из HTML-кода изображения
+    $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
+    return $html;
+}
+add_filter('z_taxonomy_image', 'remove_taxonomy_image_size_attributes', 10, 3);
+

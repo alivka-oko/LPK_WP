@@ -1,4 +1,13 @@
+<?php
+/*
+Template Name: Товар
+*/
+?>
 <?php get_header() ?>
+<?php
+$post = $wp_query->post;
+
+?>
 <section class="SecondBanner" style="background: url(<?= CFS()->get('background') ?>);">
     <div class="container">
         <div class="titleText">
@@ -338,12 +347,12 @@
     let div_product = document.querySelector('.products__price');
     let table_product = div_product.querySelector('table');
     table_product.classList.add('products__price-table');
-    table_product.setAttribute('width','100%');
-    table_product.setAttribute('border','0');
-    table_product.setAttribute('cellspacing','0');
-    table_product.setAttribute('cellpadding','0');
+    table_product.setAttribute('width', '100%');
+    table_product.setAttribute('border', '0');
+    table_product.setAttribute('cellspacing', '0');
+    table_product.setAttribute('cellpadding', '0');
     // <table width="100%" border="0" cellspacing="0" cellpadding="0" class="products__price-table">
-    
+
 
     let documents = document.querySelectorAll('.smi-material__content');
     documents.forEach(document_file => {

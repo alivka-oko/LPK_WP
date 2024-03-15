@@ -1,5 +1,5 @@
 <?php get_header() ?>
-<section class="SecondBanner " style="background: url(<?= CFS()->get('banner',71) ?>);">
+<section class="SecondBanner " style="background: url(<?= CFS()->get('banner', 71) ?>);">
     <div class="container">
         <div class="titleText">
             <h1><?= single_cat_title(); ?></h1>
@@ -69,12 +69,12 @@
                                         }
                                     }
                                 }
-                                    ?>
-                                    </div>
+                                ?>
                             </div>
-                            <div class="products__text">
-                                <h5><?php the_title(); ?></h5>
-                            </div>
+                        </div>
+                        <div class="products__text">
+                            <h5><?php the_title(); ?></h5>
+                        </div>
                     </a>
                 </div>
             <?php endwhile; ?>
@@ -82,4 +82,10 @@
 
     </div>
 </section>
+<script>
+    let img_content = document.querySelector('.Products.content');
+    let img_category = img_content.querySelector('img');
+    img_category.removeAttribute('height');
+    img_category.removeAttribute('width');
+</script>
 <?php get_footer() ?>

@@ -13,44 +13,14 @@
                 </div>
                 <div class="block center col-sm-12 col-md-6">
                     <div class="nav row">
-                        <div class="block nav-block col-sm-12 col-md-4">
-                            <h5>О компании</h5>
-                            <ul class="footerMenu">
-                                <li class="nav-item first"><a class="nav-link" href="about-forest-group">О «Форест
-                                        групп»</a></li>
-                                <li class="nav-item"><a class="nav-link" href="quality-products">Качество
-                                        продукции</a></li>
-                                <li class="nav-item"><a class="nav-link" href="ecology">Экология</a></li>
-                                <li class="nav-item last"><a class="nav-link" href="jobs/" forest="">Вакансии</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="block nav-block col-sm-12 col-md-4">
-                            <h5>Продукция и услуги</h5>
-                            <ul class="footerMenu">
-                                <li class="nav-item first"><a class="nav-link" href="lumber/">Пиломатериалы</a></li>
-                                <li class="nav-item"><a class="nav-link" href="mouldings/">Погонажные изделия</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="white-pellets">Пеллеты</a></li>
-                                <li class="nav-item"><a class="nav-link" href="pallet">Поддоны</a></li>
-                                <li class="nav-item"><a class="nav-link" href="glued-timber">Клееный брус</a></li>
-                                <li class="nav-item last"><a class="nav-link" href="building/">Домостроение</a></li>
-                            </ul>
-                        </div>
-                        <div class="block nav-block col-sm-12 col-md-4">
-                            <h5>Информация</h5>
-                            <ul class="footerMenu">
-                                <li class="nav-item first"><a class="nav-link" href="questions-and-answers">Вопросы
-                                        и ответы</a></li>
-                                <li class="nav-item"><a class="nav-link" href="documents">Документы</a></li>
-                                <li class="nav-item last"><a class="nav-link" href="calculator">Калькулятор</a></li>
-                            </ul>
-                        </div>
+                        <?php if (is_active_sidebar('footer_sidebar')) : ?>
+                            <?php dynamic_sidebar('footer_sidebar'); ?>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="block right col-sm-12 col-md-3">
                     <h5>Напишите нам:</h5>
-                    <a target="_blank" href="mailto:<?= CFS()->get('s_mail',71) ?>?subject=Вопрос с сайта"><?= CFS()->get('s_mail',71) ?></a>
+                    <a target="_blank" href="mailto:<?= CFS()->get('s_mail', 71) ?>?subject=Вопрос с сайта"><?= CFS()->get('s_mail', 71) ?></a>
 
                     <div class="social decktop">
                         <a target="_blank" href="https://t.me/ForestGroups_bot">
@@ -121,67 +91,20 @@
                 <h3>Заказать звонок</h3>
                 <span>Оставьте заявку и наш менеджер свяжется с Вами в ближайшее время</span>
             </div>
-            <form action="contacts" method="post" class="ajax_form af_example" id="RequestCall">
-                <input type="hidden" name="pageURL" value="https://forest-groups.ru/contacts">
-                <input type="hidden" name="title" value="Контакты">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="JljkhYUj" value="" placeholder="Имя*">
-                    <span class="error_JljkhYUj"></span>
-                </div>
-                <div class="form-group">
-                    <input type="number" class="form-control" name="ljbghjwk" value="" placeholder="Номер телефона*">
-                    <span class="error_ljbghjwk"></span>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" name="email" value="" placeholder="E-mail">
-                    <span class="error_email"></span>
-                </div>
-                <div class="form-group s-message">
-                    <input class="form-control" type="text" name="nospam:blank" value="" placeholder="Ваше сообщение">
-                    <textarea class="form-control" name="message" value="" placeholder="Ваше сообщение"></textarea>
-                    <span class="error_message"></span>
-                </div>
-
-                <div class="form-group">
-                    <label class="custom">
-                        <input class="checkbox" type="checkbox" onchange="document.getElementById('RequestCallBtn').disabled = !this.checked">
-                        <span class="checkbox-custom"></span>
-                        <span class="label"> <a href="https://forest-groups.ru/assets/doc/privacy-policy.pdf" target="_blank">Я соглашаюсь с политикой обработки персональных данных</a></span>
-                    </label>
-                </div>
-                <div class="form-button">
-                    <input type="submit" name="RequestCall" class="btn btn-big btn-green" id="RequestCallBtn" value="Отправить" disabled="">
-                </div>
-
-                <input type="hidden" name="af_action" value="4faebcfab493a9709b77db01b9bc15ad">
-            </form>
-        </div>
-    </div>
-</div>
-<!-- End modal -->
-<!-- Modal -->
-<div class="modal fade bd-example-modal-lg" id="VideoPresentationModal" tabindex="-1" aria-labelledby="VideoPresentationModalLabel" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="VideoPresentationModal">
-                <iframe src="https://www.youtube.com/embed/BSzYokB2CCI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-            </div>
+           <?= do_shortcode('[contact-form-7 id="afad669" title="Заказать звонок"]')?>
         </div>
     </div>
 </div>
 <!-- End modal -->
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="/assets/template/libs/counter/jquery.counterup.min.js"></script>
-    <script src="/assets/template/libs/counter/jquery.waypoints.js"></script>
-    <script src="assets/template/libs/FlexSlider/jquery.flexslider.js"></script>
-    <script src="assets/template/libs/lightbox2/lightbox.js"></script>
-    <script src="assets/template/js/common.js"></script> -->
+
+<script>
+    let footer_a =document.querySelector('footer .nav.row').querySelectorAll('a');
+    footer_a.forEach(element => {
+        element.style.color = '#6e797f';
+    });
+
+</script>
 <?php wp_footer(); ?>
 </body>
 
