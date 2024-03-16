@@ -2632,6 +2632,8 @@ section.CandidateProfile #experience .form-row:last-child {
 .about__numbers .inNumbers-item .inNumbers-title {
     font-size: 30px;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
 }
 
 .about__numbers .inNumbers-item .inNumbers-title span {

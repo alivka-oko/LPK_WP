@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Контакты
+Template Name: Качество продукции
 */
 ?>
 <?php get_header() ?>

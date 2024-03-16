@@ -2,7 +2,9 @@
 <section class="SecondBanner " style="background: url(<?= CFS()->get('banner', 71) ?>);">
     <div class="container">
         <div class="titleText">
-            <h1><?= single_cat_title(); ?></h1>
+            <h1>
+                <?= single_cat_title(); ?>
+            </h1>
         </div>
     </div>
 </section>
@@ -13,16 +15,19 @@
                 <?= category_description(); ?>
             </div>
             <div class="col-md-6">
-                <?php if (function_exists('z_taxonomy_image')) z_taxonomy_image(); ?>
+                <?php if (function_exists('z_taxonomy_image'))
+                    z_taxonomy_image(); ?>
             </div>
         </div>
         <ul class="row products__list">
             <?php
-            while (have_posts()) : the_post();
-            ?>
+            while (have_posts()):
+                the_post();
+                ?>
                 <div class="col-md-3 products__list-item">
                     <a class="products__link" href="<?php the_permalink(); ?>">
-                        <div class="products__img" style="background: url(<?= CFS()->get('gallery')[0]['image'] ?>) center; background-size: cover;">
+                        <div class="products__img"
+                            style="background: url(<?= CFS()->get('gallery')[0]['image'] ?>) center; background-size: cover;">
                             <div class="products__img-icon">
                                 <?php
                                 $product_type = CFS()->get('product_type');
@@ -73,7 +78,9 @@
                             </div>
                         </div>
                         <div class="products__text">
-                            <h5><?php the_title(); ?></h5>
+                            <h5>
+                                <?php the_title(); ?>
+                            </h5>
                         </div>
                     </a>
                 </div>
