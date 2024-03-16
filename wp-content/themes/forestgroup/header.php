@@ -42,17 +42,8 @@
                 </ul>
 
                 <div class="right-block d-flex">
-
-                    <!--div class="languages align-self-center">
-                        <div class="languages-active"><i class="flag ru"></i><span class="languages-name">Русский</span></div>
-                        <div class="languages-dropdown">
-                            <ul>
-                                [
-                            </ul>
-                        </div>
-                    </div-->
                     <div class="callback">
-                        <a href="#tel:+79646182808" class="phone">
+                        <a href="tel:<?= CFS()->get('s_tel', 71); ?>" class="phone">
                             <?= CFS()->get('s_tel', 71); ?>
                         </a>
                         <button class="btn btn-outline-green" data-toggle="modal" data-target="#callbackModal">Заказать

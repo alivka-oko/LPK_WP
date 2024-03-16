@@ -5,11 +5,9 @@
                 <div class="block left col-sm-12 col-md-3">
                     <a href="<?= get_home_url() ?>" class="logotype"><?php the_custom_logo() ?></a>
                     <div class="phone">
-                        <!--a href="tel:+79611383157">+7 961 138-31-57</a-->
-                        <a href="tel:+79646182808">+7 964 618-28-08</a>
+                        <a href="tel:<?= CFS()->get('s_tel',71)?>"><?= CFS()->get('s_tel',71)?></a>
                     </div>
-                    <span class="address">215113, Смоленская обл., Вяземский р-н, г.Вязьма, ул.Новая Бозня,
-                        д.3</span>
+                    <span class="address"><?= CFS()->get('s_address',71)?></span>
                 </div>
                 <div class="block center col-sm-12 col-md-6">
                     <div class="nav row">

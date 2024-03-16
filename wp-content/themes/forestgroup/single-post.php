@@ -299,19 +299,8 @@ $post = $wp_query->post;
                             <?php
                             }
                             ?>
-                            <!-- <h3>Сертификаты</h3>
-                            <div class="smi-material__content mb-3">
-                                <a class="smi-material__title" href="https://forest-groups.ru/assets/doc/light-pellets.pdf" target="_blank">СЕРТИФИКАТ ИСПЫТАНИЙ</a>
-                                <div class="description">Светлые пеллеты</div>
-                                <span class="smi-material__doc">PDF</span>
-                                <span class="smi-material__value">0.25 МБ</span>
-                            </div>
-                            <div class="smi-material__content mb-3">
-                                <a class="smi-material__title" href="https://forest-groups.ru/assets/doc/light-grey-pellets.pdf" target="_blank">СЕРТИФИКАТ ИСПЫТАНИЙ</a>
-                                <div class="description">Светло-серые пеллеты</div>
-                                <span class="smi-material__doc">PDF</span>
-                                <span class="smi-material__value">0.28 МБ</span>
-                            </div> -->
+                            <!-- Текст-->
+                            <?= CFS()->get('text')?>
                         </div>
                     </div>
                 </div>
